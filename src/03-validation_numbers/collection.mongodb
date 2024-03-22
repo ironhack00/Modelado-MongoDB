@@ -4,7 +4,7 @@ db.createCollection( 'users',{
     validator: {
         $jsonSchema: {
             bsonType: 'object',
-            required: ['password', 'email', 'role'],
+            required: ['password', 'email'],
             properties: {
                 name: {
                     bsonType: 'string',
@@ -17,17 +17,6 @@ db.createCollection( 'users',{
                 },
                 password: {
                     bsonType: 'string'
-                },
-                age: {
-                    bsonType: 'number',
-                    minimum: 18,
-                    maximum: 99
-                },
-                isSingle: {
-                    bsonType: 'bool'
-                },
-                role:{
-                    enum: [ 'customer', 'seller', 'admin' ]
                 }
             }
         }

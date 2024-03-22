@@ -3,8 +3,5 @@ use('platzi_store');
 db.users.insertOne({
     last_name: 'Molina',
     email: 'nico@gmail.com',
-    password: 'guille',
-    role: 'admin', 
-    age: 19,
-    isSingle: true
+    password: 'guille'
 });
