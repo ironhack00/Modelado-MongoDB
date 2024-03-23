@@ -1,0 +1,20 @@
+use('platzi_store');
+
+db.users.insertOne({
+    name: 'guillemo1',
+    last_name: 'Molina1',
+    email: 'nico@gmail.com',
+    password: 'loco2424*',
+    role: 'admin', 
+    social_accounts: ['twiter', 'facebook'],
+    address:{
+        street: 'bb54',
+        city: 'Argentina',
+        zip: '22022'
+    },
+    shipping_address:{
+        street: 'cr 2',
+        city: 'Argentina',
+        zip: '22022'
+    }
+});
