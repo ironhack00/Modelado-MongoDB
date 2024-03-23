@@ -1,0 +1,10 @@
+use('platzi_store');
+
+db.users.insertOne({
+    name: 'guillemo2',
+    last_name: 'Molina2',
+    email: 'nico@gmail.com',
+    password: 'loco2424*',
+    role: 'admin', 
+    social_accounts: ['twiter', 'facebook']
+});
