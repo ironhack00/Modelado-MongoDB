@@ -1,0 +1,16 @@
+use('platzi_store');
+
+db.stores.insertOne({
+    sroteId: 'ST001',
+    name: 'Guille Store',
+    address: 'CR 234'
+});
+
+db.stores_details.insertOne({
+    sroteId: 'ST001',
+    desciption: 'lo que quieras',
+    manager:{
+        email: 'anithin@gmail',
+        cellphone: '331133'
+    }
+});

@@ -1,0 +1,20 @@
+use('platzi_store');
+
+/* db.stores.findOne({
+    sroteId: 'ST001'
+});
+
+db.stores_details.findOne({
+    sroteId: 'ST001'
+}); */
+
+db.stores.aggregate([
+    {
+        $lookup: {
+          from: 'stores_details',
+          localField: 'sroteId',
+          foreignField: 'sroteId',
+          as: 'detail'
+        }
+    }
+])
