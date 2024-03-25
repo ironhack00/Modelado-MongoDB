@@ -1,0 +1,30 @@
+use('platzi_store');
+
+/* db.users.find(); */
+
+/* db.products.find() */
+
+/* db.orders.aggregate([
+    {
+        $match: {
+            user_id: ObjectId("65fee6284d885ac0731a527b") // Filtrar por el ID del usuario
+        }
+    },
+    {
+        $lookup: {
+          from: 'users', //que bd queres consultar o traer tambien
+          localField: 'user_id', // que propiedad esta enlasada en orders en este caso con users
+          foreignField: '_id',// como se llama la propiedad que esta enlasada en users
+          as: 'user'// como quiero que se llame la consulta
+        }
+    },
+    {
+        $count: "total_orders" // Contar el número de órdenes
+    }
+]); */
+
+db.orders.find(
+    {
+        _id: ObjectId('66017dc65f85bd9c0d2edb8e')
+    }
+)
